@@ -42,12 +42,11 @@ If you already have a `JENKINS_HOME` with existing files existing, you can still
 cd /path/to/jenkins_home
 git init .
 git remote add upstream git@github.com:gotgenes/jenkins_configuration_backup_and_restore.git
-git fetch
-git reset upstream/master
-git branch -m master
+git fetch upstream
+git reset --hard upstream/master
 ```
 
-See [this thread on Stack Overflow](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory) for explanations and alternative solutions.
+**WARNING**: the above command will overwrite any files you have in your `JENKINS_HOME` that match any paths of files in the Git repository. See [this thread on Stack Overflow](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory) for explanations and alternative solutions.
 
 
 #### Remove or modify this README
