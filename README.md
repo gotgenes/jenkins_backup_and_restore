@@ -21,6 +21,33 @@ Files not archived by this project include but are not limited to:
 
 ### Set up for backup
 
+#### Create and log in as the Jenkins user
+
+The Git repository of your `JENKINS_HOME` needs to be owned by the user under which the Jenkins master runs. On most installations, this user is `jenkins`. Make sure this user exists. **The following instructions assume you are logged in as the Jenkins user.** The following is an example command to log in as the Jenkins user called `jenkins`:
+
+```
+sudo -u jenkins -i
+```
+
+If you execute these commands as another user, your Jenkins user may be unable to access the Git repository and the backups may fail.
+
+
+#### Ensure a name and email are set for your Jenkins user
+
+Git will not permit a user to make commits until at a minimum the user has specified a name and email to use for commits. You can check if these values are set with the following command:
+
+```
+git config --get-regexp user.*
+```
+
+If you do not see values for both `user.name` and `user.email`, you will need to specify them, such as in the following commands:
+
+```
+git config --global user.name jenkins
+git config --global user.email jenkins@example.com
+```
+
+
 #### Clone this repository
 
 Start by cloning this repository into your intended `JENKINS_HOME`.
