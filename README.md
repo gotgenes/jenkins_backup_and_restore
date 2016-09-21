@@ -28,10 +28,10 @@ Start by cloning this repository into your intended `JENKINS_HOME`.
 ```
 mkdir -p "$JENKINS_HOME"
 cd "$JENKINS_HOME"
-git clone -o upstream git@github:gotgenes/jenkins_configuration_backup_and_restore.git .
+git clone -o upstream git@github.com:gotgenes/jenkins_configuration_backup_and_restore.git .
 ```
 
-**NOTE**: While you don't need to provide the `-o upstream`, you will probably want to reserve the remote name of `origin` for your own remote repository to which you will push for backup.
+**NOTE**: While you don't need to provide the `-o upstream`, you will probably want to reserve the remote name of `origin` for [your own remote repository to which you will push for backup](#add-your-backup-remote-location).
 
 
 ##### Cloning into an existing `JENKINS_HOME`
@@ -41,7 +41,7 @@ If you already have a `JENKINS_HOME` with existing files existing, you can still
 ```
 cd /path/to/jenkins_home
 git init .
-git remote add upstream git@github:gotgenes/jenkins_configuration_backup_and_restore.git
+git remote add upstream git@github.com:gotgenes/jenkins_configuration_backup_and_restore.git
 git fetch
 git reset upstream/master
 git branch -m master
@@ -102,7 +102,7 @@ The recommended way to use this script is to let Jenkins, itself, invoke it, by 
 
 #### Restoring the configuration
 
-In the simplest case, you can simply clone from your remote Git repository and use that as your new `JENKINS_HOME`. In the case where you have one or more files already existing in your `JENKINS_HOME`, see the directions for cloning into an existing `JENKINS_HOME` above.
+In the simplest case, you can simply clone from your remote Git repository and use that as your new `JENKINS_HOME`. In the case where you have one or more files already existing in your `JENKINS_HOME`, see [the directions for cloning into an existing `JENKINS_HOME` above](#cloning-into-an-existing-jenkins_home).
 
 
 #### Restoring the plugins
