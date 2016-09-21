@@ -49,9 +49,13 @@ git reset --hard upstream/master
 **WARNING**: the above command will overwrite any files you have in your `JENKINS_HOME` that match any paths of files in the Git repository. See [this thread on Stack Overflow](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory) for explanations and alternative solutions.
 
 
-#### Remove or modify this README
+#### Remove or modify the meta-information files
 
-Tailor this README to describe your own Jenkins configuration, or delete it.
+Remove or modify the meta-information files to be appropriate to your situation, including:
+
+* `COPYING`
+* `LICENSE`
+* `README.md`
 
 
 #### Add your backup remote location
