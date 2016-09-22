@@ -109,7 +109,7 @@ add_if_exists userContent
 
 echo "Adding job configurations."
 # For standard projects
-find jobs -name 'config.xml' -maxdepth 2 -exec git add {} \+
+find jobs -maxdepth 2 -name 'config.xml' -exec git add {} \+
 # For multi-configuration projects
 find jobs -path '*/configurations/*/config.xml' -exec git add {} \+
 
